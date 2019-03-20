@@ -51,6 +51,12 @@ public class ItemController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
+		if (command.equals("/itemRegistFrom.it")) {
+			System.out.println("[1]itemRegistFrom.it");
+			forward = new ActionForward();
+			forward.setPath("/admin/itemRegist.jsp");
+		}
+		
 		if (command.equals("/itemRegist.it")) {
 			System.out.println("[1]itemRegist.it");
 			action = new ItemRegistAction();

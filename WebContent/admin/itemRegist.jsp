@@ -21,7 +21,7 @@
 	<div class="container">
 		<div class="row">
 			<h3>상품등록</h3>
-			<form name="join" action="<%=request.getContextPath() %>/itemRegist.it" method="post" enctype="multipart/form-data">
+			<form name="itemRegist" action="itemRegist.it" method="post" enctype="multipart/form-data">
 				<table class="table table-striped"
 					style="text-align: center; border: 1px solid #dddddd; margin: auto; width: 450px;">
 					<tr>

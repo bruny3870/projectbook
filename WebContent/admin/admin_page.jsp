@@ -37,8 +37,8 @@
 	<br><br>
 		<a href="member_list.jsp">회원관리</a>
 		<a href="#">입출고관리</a>
-		<a href="<%=request.getContextPath()%>/admin/itemRegist.jsp">상품등록</a>
-		<a href="<%=request.getContextPath()%>/admin/itemList.jsp">상품목록</a>
+		<a href="/projecttest/itemRegistFrom.it">상품등록</a>
+		<a href="/projecttest/itemList.it">상품목록</a>
 		<a href="#">주문목록</a>
 		<a href="#">상품문의</a>
 	</div>

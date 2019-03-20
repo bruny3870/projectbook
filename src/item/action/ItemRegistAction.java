@@ -45,7 +45,7 @@ public class ItemRegistAction implements Action {
 		if(isRegistSuccess) {
 			forward = new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("./itemList.it");
+			forward.setPath("/itemList.it");
 		} else {
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out = response.getWriter();
