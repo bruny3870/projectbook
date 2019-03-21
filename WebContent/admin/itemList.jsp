@@ -32,17 +32,17 @@
 					</tr>
 					<c:choose>
 						<c:when test="${pageInfo.listCount>0 }">
-							<c:forEach var="itemList" items="${itemList }">
+							<c:forEach var="item" items="${itemList }">
 								<tr>
-									<td>${itemList.it_code }</td>
-									<td>${itemList.it_category }</td>
-									<td>${itemList.it_name }</td>
-									<td>${itemList.it_publisher}</td>
-									<td>${itemList.it_price }</td>
-									<td><a href="/projecttest/itemveiw.it" class="btn btn-primary">조회</a></td>
+									<td>${item.it_code }</td>
+									<td>${item.it_category }</td>
+									<td>${item.it_name }</td>
+									<td>${item.it_publisher}</td>
+									<td>${item.it_price }</td>
+									<td><a href="/projecttest/itemView.it?it_code=${item.it_code }" class="btn btn-primary">조회</a></td>
 								</tr>
 							</c:forEach>
-							<tr>
+							<%-- <tr>
 								<td colspan="8">
 									<c:if test="${pageInfo.page<=1 }">
 									</c:if>
@@ -60,7 +60,7 @@
 										</c:when>
 									</c:choose>
 								</td>
-							</tr>
+							</tr> --%>
 						</c:when>
 					<c:otherwise>
 						<tr><td colspan="8">등록된 상품이 없습니다.</td></tr>

@@ -14,12 +14,6 @@ public class ItemViewSvc {
 		Connection con = getConnection();
 		ItemDAO itemDAO = ItemDAO.getInstance();
 		itemDAO.setConnection(con);
-		int updateCount = itemDAO.UpdateCount(it_code);
-		if (updateCount > 0) {
-			commit(con);
-		} else {
-			rollback(con);
-		}
 		ItemBean item = itemDAO.SelectItem(it_code);
 		close(con);
 		return item;

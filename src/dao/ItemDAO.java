@@ -111,7 +111,7 @@ public class ItemDAO {
 				itemList.add(item);
 			}
 		} catch (Exception e) {
-			System.out.println("SelectItemList error");
+			System.out.println("[4]SelectItemList error");
 			e.printStackTrace();
 		} finally {
 			close(rs);
@@ -132,8 +132,8 @@ public class ItemDAO {
 			if (rs.next()) {
 				item = new ItemBean(rs.getString("it_code"), rs.getString("it_name"), rs.getString("it_category"),
 						rs.getString("it_author"), rs.getString("it_isbn"), rs.getString("it_publisher"),
-						rs.getString("pubdate"), rs.getInt("it_price"), rs.getString("it_content"),
-						rs.getString("it_image"), rs.getInt("it_count"));
+						rs.getString("it_pubdate"), rs.getInt("it_price"), rs.getString("it_content"),
+						rs.getString("it_img"), rs.getInt("it_count"));
 			}
 		} catch (SQLException e) {
 			System.out.println("[4]SelectItem error");
@@ -144,9 +144,9 @@ public class ItemDAO {
 		}
 		return item;
 	}
-
+	
 	public int UpdateCount(String it_code) {
-		System.out.println("[4]ItemDAO.Updatecount");
+		System.out.println("[4]ItemDAO.UpdateCount");
 		PreparedStatement pstmt = null;
 		int updateCount = 0;
 		String sql = "";
@@ -163,7 +163,4 @@ public class ItemDAO {
 		}
 		return updateCount;
 	}
-
-
-
 }

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import action.Action;
 import item.action.ItemListAction;
 import item.action.ItemRegistAction;
+import item.action.ItemViewAction;
 import vo.ActionForward;
 
 /**
@@ -64,6 +65,17 @@ public class ItemController extends HttpServlet {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				System.out.println("[1]itemRegist.it error");
+				e.printStackTrace();
+			}
+		}
+		
+		if (command.equals("/itemView.it")) {
+			System.out.println("[1]itemView.it");
+			action = new ItemViewAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				System.out.println("[1]itemView.it error");
 				e.printStackTrace();
 			}
 		}
