@@ -25,7 +25,7 @@
 						<td colspan="3">${item.it_category } | ${item.it_name }</td>
 					</tr>
 					<tr>
-						<th rowspan="6"><img src="images/${item.it_img }" width="300px" height="300px" ></th>
+						<th rowspan="6" width="300px" height="500px"><img src="images/${item.it_img }" width="300px" height="500px" ></th>
 						<td>코드</td>
 						<td>${item.it_code }</td>
 					</tr>
@@ -47,12 +47,12 @@
 					</tr>
 					<tr>
 						<td>재고</td>
-						<td>${item.it_name }</td>
+						<td>${stock.st_stock }</td>
 					</tr>
 					<tr align="center">
 						<td colspan="3"><a href="/projecttest/itemList.it" class="btn btn-primary">목록</a>
-						<a href="#" class="btn btn-primary">수정</a>
-						<a href="#" class="btn btn-primary">삭제</a></td>
+						<a href="/projecttest/itemModForm.it?it_code=${item.it_code}" class="btn btn-primary">수정</a>
+						<a href="/projecttest/itemDelete.it?it_code=${item.it_code }" class="btn btn-primary">삭제</a></td>
 					</tr>
 				</table>
 				<br>
@@ -62,7 +62,7 @@
 				</div>
 				<br>
 				<div class="text-center">
-					<a href="/projecttest/itemRegistFrom.it" class="btn btn-primary">상품등록</a>&nbsp;
+					<a href="/projecttest/itemRegistForm.it" class="btn btn-primary">상품등록</a>&nbsp;
 					<a href="<%=request.getContextPath()%>/admin/admin_page.jsp" class="btn btn-primary">관리자페이지</a>
 				</div>
 			</form>	

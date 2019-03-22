@@ -10,7 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import action.Action;
+import item.action.ItemDeleteAction;
 import item.action.ItemListAction;
+import item.action.ItemModFormAction;
+import item.action.ItemModifyAction;
 import item.action.ItemRegistAction;
 import item.action.ItemViewAction;
 import vo.ActionForward;
@@ -76,6 +79,39 @@ public class ItemController extends HttpServlet {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				System.out.println("[1]itemView.it error");
+				e.printStackTrace();
+			}
+		}
+
+		else if (command.equals("/itemModForm.it")) {
+			System.out.println("[1]itemModForm.it");
+			action = new ItemModFormAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				System.out.println("[1]itemModForm.it error");
+				e.printStackTrace();
+			}
+		}
+		
+		else if (command.equals("/itemModify.it")) {
+			System.out.println("[1]itemModify.it");
+			action = new ItemModifyAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				System.out.println("[1]itemModify.it error");
+				e.printStackTrace();
+			}
+		}
+		
+		else if (command.equals("/itemDelete.it")) {
+			System.out.println("[1]itemDelete.it");
+			action = new ItemDeleteAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				System.out.println("[1]itemDelete.it error");
 				e.printStackTrace();
 			}
 		}

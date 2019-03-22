@@ -15,7 +15,7 @@ public class ItemListSvc {
 		Connection con = getConnection();
 		ItemDAO itemDAO = ItemDAO.getInstance();
 		itemDAO.setConnection(con);
-		listCount = itemDAO.SelectListCount();
+		listCount = itemDAO.selectListCount();
 		close(con);
 		return listCount;
 	}
@@ -25,7 +25,7 @@ public class ItemListSvc {
 		ItemDAO itemDAO = ItemDAO.getInstance();
 		Connection con = getConnection();
 		itemDAO.setConnection(con);
-		ArrayList<ItemBean> itemList = itemDAO.SelectItemList(page, limit);
+		ArrayList<ItemBean> itemList = itemDAO.selectItemList(page, limit);
 		close(con);
 		return itemList;
 	}

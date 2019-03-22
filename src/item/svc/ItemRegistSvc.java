@@ -14,7 +14,7 @@ public class ItemRegistSvc {
 		Connection con = getConnection();
 		itemDAO.setConnection(con);
 		boolean isRegistSuccess = false;
-		int insertCount = itemDAO.InsertItem(item);
+		int insertCount = itemDAO.insertItem(item);
 		if(insertCount > 0) {
 			commit(con);
 			isRegistSuccess = true;
